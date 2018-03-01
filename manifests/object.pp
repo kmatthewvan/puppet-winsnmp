@@ -17,10 +17,11 @@ define winsnmp::object (
   $object = $title,
   $type   = 'string',
 ) {
-  $path = 'HKLM\SYSTEM\CurrentControlSet\services\SNMP\Parameters\RFC1156Agent'
+  $path = '32:HKLM\SYSTEM\CurrentControlSet\services\SNMP\Parameters\RFC1156Agent'
 
-  registry_value { "${path}\\${object}":
+  registry_value { $title:
     ensure => present,
+    path   => "${path}\\${object}",
     type   => $type,
     data   => $value,
     notify => Service[$winsnmp::service],

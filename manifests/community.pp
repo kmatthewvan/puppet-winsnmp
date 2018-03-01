@@ -1,3 +1,4 @@
+
 # == Define: winsnmp::community
 #
 # Configure an SNMP community on Windows installations.
