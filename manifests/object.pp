@@ -10,7 +10,7 @@
 #
 # === Copyright
 #
-# Copyright 2014 Sanoma Digital
+# Copyright 2014 Sanoma Digital test
 #
 define winsnmp::object (
   $value,
