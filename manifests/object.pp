@@ -17,7 +17,7 @@ define winsnmp::object (
   $object = $title,
   $type   = 'string',
 ) {
-  $path = '32:HKLM\SYSTEM\CurrentControlSet\services\SNMP\Parameters\RFC1156Agent'
+  $path = 'HKLM\SYSTEM\CurrentControlSet\services\SNMP\Parameters\RFC1156Agent'
 
   registry_value { $title:
     ensure => present,
