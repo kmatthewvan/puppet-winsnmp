@@ -50,7 +50,7 @@ class winsnmp (
   # Ensure required keys are present and that they only contain our values.
   registry_key { [
     'HKLM\SYSTEM\CurrentControlSet\services\SNMP\Parameters\PermittedManagers',
-    'HKLM\SYSTEM\CurrentControlSet\services\SNMP\Parameters\RFC1156Agent',
+    '32:HKLM\SYSTEM\CurrentControlSet\services\SNMP\Parameters\RFC1156Agent',
     'HKLM\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities' ]:
     purge_values => $purge,
     require      => Dism[$feature],
